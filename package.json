@@ -1,0 +1,51 @@
+{
+  "name": "@puppuccino/widgets",
+  "version": "1.0.0",
+  "description": "Terminal UI component library with reusable widgets",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "tui",
+    "terminal",
+    "cli",
+    "widgets",
+    "components",
+    "ui",
+    "text-input",
+    "spinner",
+    "progress",
+    "list"
+  ],
+  "author": "Average Joe's Lab",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/averagejoeslab/widgets.git"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
